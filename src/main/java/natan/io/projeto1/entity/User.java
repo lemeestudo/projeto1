@@ -15,8 +15,16 @@ public class User {
 	
 	@ManyToMany
 	private Set<Role> roles;
-		
-		
+	
+	public User(String email, String name) {
+		super();
+		this.email = email;
+		this.name = name;
+	}
+	public User() {
+
+	}
+	
 	public void setId(Long id) {
 		this.id = id;
 	}
@@ -34,6 +42,11 @@ public class User {
 	}
 	
 	
-	
+	public Set<Role> getRoles() {
+		return roles;
+	}
+	public void setRoles(Set<Role> roles) {
+		this.roles = roles;
+	}
 
 }
